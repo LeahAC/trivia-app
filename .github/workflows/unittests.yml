@@ -8,6 +8,8 @@ on:
       - master
 
 jobs:
+  env:
+    AWS_REGION: 'us-east-1'
   build:
     runs-on: ubuntu-latest
     steps:
