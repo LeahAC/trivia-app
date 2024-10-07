@@ -23,12 +23,4 @@ jobs:
           pip install -U -r back-end-python/tests/requirements.txt
       - name: Test with pytest
         run: 
-            pytest back-end-python/tests/unit --junit-xml=unittests.xml --cov-report=xml --cov=gameactions --cov-branch
-  reports:
-    UnitTests:
-      files:
-        - 'unittests.xml'
-    NewCoverage: #
-      files:
-        - 'coverage.xml'
-      file-format: COBERTURAXML         
+            pytest back-end-python/tests/unit --junit-xml=unittests.xml --cov-report=xml --cov=gameactions --cov-branch        
