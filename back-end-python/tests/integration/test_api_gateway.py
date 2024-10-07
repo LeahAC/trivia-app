@@ -10,14 +10,14 @@ import json
 """
 Make sure env variable AWS_SAM_STACK_NAME exists with the name of the stack we are going to test.
 """
-
+AWS_SAM_STACK_NAME = "trivia-app"
 
 class TestApiGateway(TestCase):
     api_endpoint: str
 
     @classmethod
     def get_stack_name(cls) -> str:
-        stack_name = os.environ.get("AWS_SAM_STACK_NAME")
+        stack_name = AWS_SAM_STACK_NAME
         if not stack_name:
             raise Exception(
                 "Cannot find env var AWS_SAM_STACK_NAME. \n"
