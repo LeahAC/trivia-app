@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: 3.9
       - name: Set up AWS credentials
-        uses: actions/setup-aws@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: 'us-east-1'    
       - name: Install dependencies
